@@ -1,0 +1,16 @@
+.head{
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.head__tagline{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: 100;
+}
