@@ -28,3 +28,20 @@
     font-size: 14px;    
     color: #ffffff;
 } 
+
+
+
+
+.head-info{
+    top:100%;
+    transform: translateY(-100%);
+    width: 100%;
+    min-height: 100px;
+    background: $blue;
+    position: absolute;
+}
+.info__txt {
+    width: 33%;
+    text-align: center;
+}
+

@@ -1,6 +1,6 @@
 $white : #efeee9;
-$beige: #eeebdf;
-$main-font-color : #373e42;
+$blue: #455a64;
+$main-background-color : #bdbdbd;
 
 //layout setups
 @import "layout/setups";
@@ -10,3 +10,4 @@ $main-font-color : #373e42;
 //@import "helpers/mixins";
 
 @import "blocks/home.scss";
+@import "blocks/company.scss";

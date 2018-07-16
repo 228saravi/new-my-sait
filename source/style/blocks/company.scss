@@ -1,0 +1,29 @@
+
+.company{
+
+    content: "";
+    display: block;
+    clear: both;
+    margin: 30px;
+    
+}
+.company__picture,.company__text{
+    width: 50%;
+    float: left; 
+}
+
+.img_trest{
+    height: 200px;
+    float: right;
+    margin-right: 10px;
+    display: block;
+}
+.company__text{
+    height: 200px;
+    background-color:  $main-background-color;
+}
+
+
+
+
+
