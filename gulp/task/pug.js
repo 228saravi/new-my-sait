@@ -2,7 +2,7 @@
 
 module.exports =()=>{
     $.gulp.task('pug', function() {
-        return $.gulp.src('./source/template/*.pug')
+        return $.gulp.src('./source/template/**/*.pug')
             .pipe($.gp.pug({pretty: true}))
             .on('error',$.gp.notify.onError((error)=>{
                 return {
@@ -11,6 +11,6 @@ module.exports =()=>{
                 }
             }
             ))
-            .pipe($.gulp.dest('./build/'));
+            .pipe($.gulp.dest('./build/view'));
     });
 }
