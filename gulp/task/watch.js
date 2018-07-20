@@ -7,7 +7,7 @@
         }); */
          $.gulp.watch('./source/style/*.scss',$.gulp.series('sass'));
          $.gulp.watch('./source/style/*/*.scss',$.gulp.series('sass'));
-         $.gulp.watch('./source/template/*.pug',$.gulp.series('pug'));
+         $.gulp.watch('./source/template/blocks/*.pug',$.gulp.series('pug'));
          $.gulp.watch('./source/img/*',$.gulp.series('img'));
      })
  }
