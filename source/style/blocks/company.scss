@@ -5,33 +5,65 @@
     display: block;
     clear: both;
     margin: 30px;
-    width: 1020px;
+    
     margin-left: auto;
     margin-right: auto;
+    height: 345px;
+    width: 1200px;
+    background-color:  $main-background-color;
+    @include desktop{
+        width: 90vw;
+    }
+    @include laptop{
+        width: 90vw;
+    }
+    @include tablets{
+        width: 90vw;
+        height: auto;
+    }
 }
 .company__picture{
+    margin: 10px;
     width: 40%;
     float: left; 
+    @include tablets{
+        width: 97%;   
+        float: none; 
+    }
 }
-.company__text{
-    width: 60%;
+.company__info{
+    margin: 10px;
     float: left; 
+    width: 50%;
+    @include tablets{
+        width: 97%;   
+        float: none;   
+        padding-bottom: 10px; 
+    }
 }
 
 .img_trest{
     width: 100%;
     float: right;
     display: block;
+    @include tablets{
+        width: 100%;   
+        float: none; 
+        padding: 2px;   
+    }
 }
-.company__text{
-    height: 200px;
-    background-color:  $main-background-color;
+.company__info-text{
+    overflow: hidden;
+    margin-bottom: 10px;
+    height: 265px;
+    @include tablets{
+        height: 185px;      
+    }
     
 }
 
 .bytton-details{
-    position: relative;
-    top:150px;
+    
     padding: 10px 15px;
     border-radius: 0px;
     border: 2px solid #ff5252;
@@ -41,8 +73,7 @@
 	text-decoration: none;
 }
 .bytton-sertificate{
-    position: relative;
-    top:150px;
+    
     padding: 10px 15px;
     border: 2px solid #3d3d33;
     font-weight: 700;

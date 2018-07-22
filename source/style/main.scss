@@ -7,7 +7,7 @@ $main-background-color : #bdbdbd;
 @import "layout/fonts";
 
 //mixins
-//@import "helpers/mixins";
+@import "layout/mixins";
 
 @import "blocks/home.scss";
 @import "blocks/company.scss";

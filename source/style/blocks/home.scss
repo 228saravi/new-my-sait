@@ -1,52 +1,111 @@
-.head{
-    height: 600px;
-    overflow: hidden;
-    position: relative;
+html{
+    @include desktop{
+        font-size: 16px;
+    }
+    @include laptop{
+        font-size: 15px;
+    }
+    @include tablets{
+        font-size: 14px;
+    }
+    @include phones{
+        font-size: 13px;
+    }
 }
 
-.head__tagline{
-    position: absolute;
-    top:50%;
-    transform: translateY(-50%);
-    text-align: center;
-    width: 100%;
-    color: #ffffff;
-    font-size: 35px;
-    font-weight: 100;
-    
+.wrapper{
+    display: flex;
+    width: 100vw;
 }
-.logo{
-    position: absolute;
-    top:10px;
-    transform: translate(10%,10%);
+.nav,.navbar,.navreg{
+    display: flex;
+    flex-direction: row;
 }
-
 .nav{
-    position: absolute;
-    top:10px;
-    transform: translate(10%,10%);
-    font-size: 14px;    
+    width: 100wh;
+    margin: 0.7rem;
+    justify-content: space-between;
+}
+.head{
+    display: flex;
+    background-image: url("../../img/Header.jpg");
+    width: 100vw;
+    min-height: 100vh;
+    flex-direction: column;
+
+
+}
+.head__tagline{
+
+    align-self: center;
+    flex: 1;
+    padding-top: 45vh; 
     color: #ffffff;
-} 
-
-
-
-
-.head-info{
-    top:100%;
-    transform: translateY(-100%);
-    width: 100%;
-    min-height: 100px;
-    background: $blue;
-    position: absolute;
+    font-size: 2rem;
+    font-weight: 100;
 }
-.info__txt {
-    width: 33%;
-    text-align: center;
+
+.info{
+    width: 100px;
 }
-.title{   
-    font-weight: 700;
-    font-size: 36px;
+.navbar__link, .registrasion__link{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 1rem;
+
 }
+
+//img(src="../img/Header.jpg")
+// .head{
+//     height: 600px;
+//     overflow: hidden;
+//     position: relative;
+// }
+
+// .head__tagline{
+//     position: absolute;
+//     top:50%;
+//     transform: translateY(-50%);
+//     text-align: center;
+//     width: 100%;
+//     color: #ffffff;
+//     font-size: 2rem;
+//     font-weight: 100;
+    
+// }
+// .logo{
+//     position: absolute;
+//     top:10px;
+//     transform: translate(10%,10%);
+// }
+
+// .nav{
+//     position: absolute;
+//     top:10px;
+//     transform: translate(10%,10%); 
+//     color: #ffffff;
+//     display: flex;
+//     width: 100vw;
+// } 
+
+
+
+
+// .head-info{
+//     top:100%;
+//     transform: translateY(-100%);
+//     width: 100%;
+//     min-height: 100px;
+//     background: $blue;
+//     position: absolute;
+// }
+// .info__txt {
+//     width: 33%;
+//     text-align: center;
+// }
+// .title{   
+//     font-weight: 700;
+//     font-size: 2rem;
+// }
 
 
