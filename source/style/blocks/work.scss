@@ -1,25 +1,36 @@
-
 .work{
-    display: block;
-    clear: both;
-    padding-top: 30px;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+    margin-top: 30px;
 }
-.jobs{
-    display: block;
-    clear: both;
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    @include desktop{
-        width: 90vw;
-    }
-    @include laptop{
-        width: 90vw;
-    }
+.title{
+    font-size: 2rem;
+
+}
+// .work{
+//     display: block;
+//     clear: both;
+//     padding-top: 30px;
+//     text-align: center;
+// }
+// .jobs{
+//     display: block;
+//     clear: both;
+//     width: 1200px;
+//     margin-left: auto;
+//     margin-right: auto;
+//     @include desktop{
+//         width: 90vw;
+//     }
+//     @include laptop{
+//         width: 90vw;
+//     }
     
 
-}
+// }
 .job {
     border: 1px solid black;
     width: 400px;       

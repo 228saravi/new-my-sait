@@ -1,66 +1,116 @@
-
+.about{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
 .company{
-
-    content: "";
-    display: block;
-    clear: both;
-    margin: 30px;
-    
-    margin-left: auto;
-    margin-right: auto;
+    background-color:  $main-background-color;
+    padding: 0.7rem;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     height: 345px;
     width: 1200px;
-    background-color:  $main-background-color;
     @include desktop{
         width: 90vw;
     }
     @include laptop{
         width: 90vw;
+        flex-direction: column;
+
+        height:auto;
     }
     @include tablets{
         width: 90vw;
-        height: auto;
-    }
-}
-.company__picture{
-    margin: 10px;
-    width: 40%;
-    float: left; 
-    @include tablets{
-        width: 97%;   
-        float: none; 
-    }
-}
-.company__info{
-    margin: 10px;
-    float: left; 
-    width: 50%;
-    @include tablets{
-        width: 97%;   
-        float: none;   
-        padding-bottom: 10px; 
-    }
-}
+        flex-direction: column;
 
-.img_trest{
-    width: 100%;
-    float: right;
-    display: block;
-    @include tablets{
-        width: 100%;   
-        float: none; 
-        padding: 2px;   
+        height:auto;
     }
 }
 .company__info-text{
     overflow: hidden;
-    margin-bottom: 10px;
     height: 265px;
     @include tablets{
         height: 185px;      
     }
+ 
     
 }
+.company__picture{
+
+}
+.img_trest{
+    
+    // margin: 10px;
+    // width: 40%;
+    @include laptop{
+        width: 86vw;  
+    }
+}
+
+// .company{
+
+//     content: "";
+//     display: block;
+//     clear: both;
+//     margin: 30px;
+    
+//     margin-left: auto;
+//     margin-right: auto;
+//     height: 345px;
+//     width: 1200px;
+//     background-color:  $main-background-color;
+//     @include desktop{
+//         width: 90vw;
+//     }
+//     @include laptop{
+//         width: 90vw;
+//     }
+//     @include tablets{
+//         width: 90vw;
+//         height: auto;
+//     }
+// }
+// .company__picture{
+//     margin: 10px;
+//     width: 40%;
+//     float: left; 
+//     @include tablets{
+//         width: 97%;   
+//         float: none; 
+//     }
+// }
+// .company__info{
+//     margin: 10px;
+//     float: left; 
+//     width: 50%;
+//     @include tablets{
+//         width: 97%;   
+//         float: none;   
+//         padding-bottom: 10px; 
+//     }
+// }
+
+// .img_trest{
+//     width: 100%;
+//     float: right;
+//     display: block;
+//     @include tablets{
+//         width: 100%;   
+//         float: none; 
+//         padding: 2px;   
+//     }
+// }
+// .company__info-text{
+//     overflow: hidden;
+//     margin-bottom: 10px;
+//     height: 265px;
+//     @include tablets{
+//         height: 185px;      
+//     }
+    
+// }
 
 .bytton-details{
     
