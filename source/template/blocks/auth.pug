@@ -11,12 +11,13 @@ block content
             .from__title Авторизация
             form.from_log(action="/")
                 .form-group-login
+                    .font-icon-logo   
                     input.form-control(type='login', name='login' placeholder='Login' autofocus=true)
                 .form-group-password
-                    .font-icon-logo
-                    input.form-control(type='password', name='{:password}' placeholder='password')
+                    .font-icon-password
+                    input.form-control(type='password', name='{:password}' placeholder='Password')
                 .form-group-button
-                    button.btn.btn-primary(type='submit') Log-in
+                    button.btn.btn-submit(type='submit') Log-in
                     button.btn.btn-primary(type='button') Exit
 
     script(src="/js/main.js")

@@ -11,10 +11,10 @@
     align-items: center;
 }
 .blur{
-    width: 300px;
+    width: 380px;
     height: 400px;
     background: url("../../img/auth.jpg") center no-repeat;
-    filter: blur(10px)      ;
+    filter: blur(20px)      ;
 }
 .auth_from{
     
@@ -22,19 +22,19 @@
     height: 100%;    
 }
 .filter_opacity{
-    width: 300px;
-    height: 300px;
-   
+    width: 380px;
+    height: 400px;
+    border-radius: 5px;
     position: absolute;
     background-color: #ffffff;
-    filter: opacity(80%);
+    filter: opacity(30%);
     top: 50%;
 	transform: translateY(-50%);
 
 }
 .from{
-    width: 300px;
-    height: 200px;
+    width: 380px;
+    height: 400px;
    
     position: absolute;
     top: 50%;
@@ -46,6 +46,7 @@
 
 }
 .from__title{
+    padding: 50px;
     color:$grey;
     font-size: 2rem;
     height: 30px
@@ -53,26 +54,94 @@
 .from_log{
     display: flex;
     flex-direction: column;
-    
+    width: 380px;
     justify-content: center;
 }
-.from_group-login{
+.from-group-login{
     width: 100%;
-    justify-self: center;
+    
 }
 .form-control{
     border: 2px #ffffff solid;
-    height: 40px;
-    margin-top: 5px;
-    margin-bottom:5px; 
-    padding-left:40px;
-    border-radius: 10px;
+    height: 45px;
+    width: 340px;
+    margin: 5px 20px 5px 20px;
+    padding-left:50px;
+    border-radius: 5px;
 }
 .font-icon-logo{
-    font-family: "FontAwesome";
-    content: "\f007";
-    font-size: 12px;
+    @include fa-icon;
+    @extend .fas;
+    &:before{
+        content: fa-content($fa-var-user);
+    }
+    @include desktop{
+        transform: translateY(-49%);
+    }
     position: absolute;
+    padding: 7px 10px 8px 7px;
+    transform: translateY(-51%);
+    left: -7%;
+    
+    background: #f0efea; 
+    top:50%;
+	
+    font-size: 30px;
+    color: $grey;
+    // background: 
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.font-icon-password{
+    @include fa-icon;
+    @extend .fas;
+    &:before{
+        content: fa-content($fa-var-key);
+    }
+    @include desktop{
+        transform: translateY(73%);
+    }
+    //border: 1px black solid;
+    top: 50%;
+    transform: translateY(71%);
+    padding: 7px 7px 8px 7px;
+    left: -7%;
+    //transform: translateX(2%);
+    font-size: 30px;
+    color: $grey;
+    position: absolute;
+    background: #f0efea; 
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.form-group-button
+{
+    width: 380px;
+    display: flex;
+
+}
+.form-group-password{
+    flex:1;
+
+}
+.btn{
+    flex: 1;
+    height: 45px;
+    background: #00bfa5;
+    display: inline-block;
+    border: #00bfa5;
+    padding-right: 55px;
+    
+    padding-left: 55px;
+	text-decoration: none;
+     
+}
+.btn-submit{
+    border-bottom-left-radius: 5px;
+    margin-right: 1px;
+}
+.btn-primary{
+    border-bottom-right-radius: 5px;
 }
 
 

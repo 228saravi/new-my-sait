@@ -2,7 +2,10 @@ $white : #efeee9;
 $blue: #455a64;
 $main-background-color : #bdbdbd;
 $grey: #a9aeb0;
-@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "scss/fontawesome.scss";
+@import "scss/solid.scss";
+@import "scss/brands.scss";
+
 //layout setups
 @import "layout/setups";
 @import "layout/fonts";
