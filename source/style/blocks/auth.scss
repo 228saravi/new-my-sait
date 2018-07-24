@@ -11,14 +11,69 @@
     align-items: center;
 }
 .blur{
-    width: 400px;
-    height: 500px;
+    width: 300px;
+    height: 400px;
+    background: url("../../img/auth.jpg") center no-repeat;
+    filter: blur(10px)      ;
 }
 .auth_from{
-    background: url("../../img/auth.jpg") center no-repeat;
-    filter: blur(10px);
-    width: 100%;
-    height: 100%;
-
     
+    width: 100%;
+    height: 100%;    
 }
+.filter_opacity{
+    width: 300px;
+    height: 300px;
+   
+    position: absolute;
+    background-color: #ffffff;
+    filter: opacity(80%);
+    top: 50%;
+	transform: translateY(-50%);
+
+}
+.from{
+    width: 300px;
+    height: 200px;
+   
+    position: absolute;
+    top: 50%;
+	transform: translateY(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    justify-content: space-around;
+
+}
+.from__title{
+    color:$grey;
+    font-size: 2rem;
+    height: 30px
+}
+.from_log{
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+}
+.from_group-login{
+    width: 100%;
+    justify-self: center;
+}
+.form-control{
+    border: 2px #ffffff solid;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom:5px; 
+    padding-left:40px;
+    border-radius: 10px;
+}
+.font-icon-logo{
+    font-family: "FontAwesome";
+    content: "\f007";
+    font-size: 12px;
+    position: absolute;
+}
+
+
+

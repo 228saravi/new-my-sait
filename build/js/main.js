@@ -2,18 +2,17 @@ var blur=(function(){
     
     return{
         set:function(){
-            var bgblur=document.querySelector('.auth_from');
+            var bgblur=document.querySelector('.blur');
             var bgWidth=document.querySelector('.auth').offsetWidth;
              
             bgblur.style.backgroundSize = bgWidth + 'px';
-            console.log( );
+
         }
     }
 }())
 
-window.onload=()=>{
-    blur.set(); 
-}
+blur.set(); 
+
 
 window.onresize=()=>{
     blur.set();

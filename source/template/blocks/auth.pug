@@ -5,5 +5,18 @@ block title
 block content
     .auth
         .blur
-            .auth_from 
-        
+            .auth_from
+        .filter_opacity
+        .from
+            .from__title Авторизация
+            form.from_log(action="/")
+                .form-group-login
+                    input.form-control(type='login', name='login' placeholder='Login' autofocus=true)
+                .form-group-password
+                    .font-icon-logo
+                    input.form-control(type='password', name='{:password}' placeholder='password')
+                .form-group-button
+                    button.btn.btn-primary(type='submit') Log-in
+                    button.btn.btn-primary(type='button') Exit
+
+    script(src="/js/main.js")
