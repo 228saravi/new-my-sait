@@ -131,10 +131,15 @@
     display: inline-block;
     border: #00bfa5;
     padding-right: 55px;
-    
+    color: #ffffff;
     padding-left: 55px;
 	text-decoration: none;
-     
+    &:hover{
+       background: #009688;
+    } 
+    &:active{
+        background: #007b70;
+    } 
 }
 .btn-submit{
     border-bottom-left-radius: 5px;
