@@ -2,16 +2,15 @@
 
 module.exports =()=>{
     $.gulp.task('pug', function() {
-        return $.gulp.src('./source/template/blocks/')
-        // .pipe($.gp.copy())    
-        // .pipe($.gp.pug({pretty: true}))
-            // .on('error',$.gp.notify.onError((error)=>{
-            //     return {
-            //         title:'Pug',
-            //         message: error.message
-            //     }
-            // }
-            // ))
+        return $.gulp.src('./source/template/blocks/**/*.pug')
+             .pipe($.gp.pug({pretty: true}))
+             .on('error',$.gp.notify.onError((error)=>{
+                return {
+                    title:'Pug',
+                    message: error.message
+                }
+            }
+            ))
             .pipe($.gulp.dest('./build/view'));
     });
 }

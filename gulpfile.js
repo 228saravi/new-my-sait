@@ -19,7 +19,8 @@ $.gulp.task('default', $.gulp.series(
     $.gulp.parallel(
         'sass',
         'pug',
-        'img'
+        'img',
+        'babel'
     ),
     $.gulp.parallel(
         'watch',
