@@ -2,4 +2,3 @@ node_modules
 build/assets
 build/img
 build/view
-package-lock.json
