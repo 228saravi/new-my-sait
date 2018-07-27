@@ -2,6 +2,7 @@ $white : #efeee9;
 $blue: #455a64;
 $main-background-color : #bdbdbd;
 $grey: #a9aeb0;
+$green: #20b5a1;
 @import "scss/fontawesome.scss";
 @import "scss/solid.scss";
 @import "scss/brands.scss";
@@ -20,6 +21,7 @@ $grey: #a9aeb0;
 @import "blocks/maps.scss";
 
 @import "blocks/footer.scss";
+@import "blocks/preloader.scss";
 
 
 @import "blocks/auth.scss";
