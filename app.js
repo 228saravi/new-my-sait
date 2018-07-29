@@ -18,7 +18,11 @@ const app = express();
 
 const jsonfile = require('jsonfile');
 
-//const uploadDir = path.join(__dirname, config.upload);
+const fileVersionControl = 'version.json';
+const config = require('./config');
+// получаем абсолютный путь к папке upload, в которую будут загружаться картинки
+// проектов
+const uploadDir = path.join(__dirname, config.upload);
 // view engine setup
 app.set('views', path.join(__dirname, 'build/views'));
 app.set('view engine', 'pug');

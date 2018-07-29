@@ -3,9 +3,9 @@
 module.exports = ()=>{
     $.gulp.task('serve', ()=>{
         $.browserSync.init({
-            open: false,
-            server: './build'
+            proxy: 'http://localhost:3000',
+            port: 4000
         });
-        $.browserSync.watch('build', $.browserSync.reload);
+        // $.browserSync.watch('build', $.browserSync.reload);
     })
 }

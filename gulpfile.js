@@ -22,6 +22,9 @@ $.gulp.task('default', $.gulp.series(
         'babel'
     ),
     $.gulp.parallel(
+        'nodemon'
+    ),
+    $.gulp.parallel(
         'watch',
         'serve'
     )
