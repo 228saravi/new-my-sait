@@ -1,6 +1,7 @@
 `use strict`;
 
 global.$ = {
+    config: require('./gulp/config'),
     paths:{
         task: require('./gulp/paths/tasks.js')
     },
