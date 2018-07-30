@@ -6,14 +6,6 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-const app = express();const express = require('express');
-const path = require('path');
-const fs = require('fs');
-const http = require('http');
-const favicon = require('serve-favicon');
-const logger = require('morgan');
-const cookieParser = require('cookie-parser');
-const bodyParser = require('body-parser');
 const app = express();
 
 const jsonfile = require('jsonfile');
