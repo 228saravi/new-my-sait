@@ -1,5 +1,5 @@
 module.exports = {
   root: './build',
-  BROWSER_SYNC_RELOAD_DELAY: 750,
+  BROWSER_SYNC_RELOAD_DELAY: 1000,
   autoprefixerConfig: ['last 3 version', '> 1%', 'ie 8', 'ie 9', 'Opera 12.1']
 };

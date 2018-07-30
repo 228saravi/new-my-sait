@@ -1,7 +1,5 @@
 extends ../main
 
-block title
-    |Авторизация
 block content
     .auth
         .blur
@@ -9,7 +7,7 @@ block content
         .filter_opacity
         .from
             .from__title Авторизация
-            form.from_log(action="/")
+            form.from_log(action="/" method='POST')
                 .form-group-login
                     .font-icon-logo   
                     input.form-control(type='login', name='login' placeholder='Login' autofocus=true)
