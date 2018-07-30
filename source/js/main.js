@@ -61,8 +61,6 @@ var preloader = (function () {
 
   
 var blur = (function () {
-	var bl = document.querySelector('.blur');
-
 	return {
 		set: function () {
 			var imgWidth = $('.auth').width();

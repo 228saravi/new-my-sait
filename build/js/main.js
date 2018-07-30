@@ -61,8 +61,6 @@ $(function () {
 });
 
 var blur = function () {
-  var bl = document.querySelector('.blur');
-
   return {
     set: function set() {
       var imgWidth = $('.auth').width();
