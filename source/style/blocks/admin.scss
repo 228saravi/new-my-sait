@@ -1,0 +1,90 @@
+html{
+    font-size: 16px;
+    @include desktop{
+        font-size: 16px;
+    }
+    @include laptop{
+        font-size: 15px;
+    }
+    @include tablets{
+        font-size: 14px;
+    }
+    @include phones{
+        font-size: 13px;
+    }
+}
+.admin{
+    display: flex;
+
+}
+.admin__left-block{
+    color: $white;
+    background-color: $blue;
+    flex-basis: 200px;
+    height: 100vh;
+}
+.admin__left-block{
+
+    height: 100vh;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.menu_panel{
+    cursor: pointer;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.admin_line{
+    border: none; /* Убираем границу */
+    background-color: red; /* Цвет линии */
+    color: red; /* Цвет линии для IE6-7 */
+    height: 2px;
+}
+
+.menu__home{
+    background: #3b4c54;
+    border-left: 3px solid $red;
+    @include fa-icon;
+    @extend .fas;
+    &:before{
+        font-size: 1.5rem;
+        padding: 10px;
+        content: fa-content($fa-var-home);
+     }
+}
+.menu__works{
+    @include fa-icon;
+    @extend .fas;
+    &:before{
+        font-size: 1.5rem;
+        padding: 10px;
+        content: fa-content($fa-var-building);
+     }
+}
+
+.menu__jobs{
+    @include fa-icon;
+    @extend .fas;
+    &:before{
+        font-size: 1.5rem;
+        padding: 10px;
+        content: fa-content($fa-var-briefcase);
+     }
+}
+
+////////////////////\\\\\\\\\\\\\\\\
+.admin__right-block{
+    flex: 1;
+    height: 100vh;
+    overflow: scroll;
+}
+.block1{
+    display: block;
+}
+.block2{
+    display: block;
+}

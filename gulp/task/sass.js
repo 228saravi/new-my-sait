@@ -1,7 +1,7 @@
 `use strict`
 module.exports = ()=>{
     $.gulp.task('sass', function() {
-        return $.gulp.src('./source/style/main.scss')
+        return $.gulp.src('./source/style/*')
         .pipe($.gp.sourcemaps.init())
         .pipe($.gp.sass())
         .on('error',$.gp.notify.onError({

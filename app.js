@@ -28,7 +28,8 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 
 app.use('/',require('./routes/index'));
- app.use('/auth', require('./routes/auth'));
+app.use('/auth', require('./routes/auth'));
+app.use('/admin', require('./routes/adminka'));
 
 
 // 404 catch-all handler (middleware)
