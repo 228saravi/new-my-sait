@@ -4,9 +4,10 @@ var clickli = (function () {
    
   
     var setPercents = function (current) {
-      panel.toArray().forEach(function (elem) {
+      panel.toArray().forEach(function (elem,i) {
         $(elem).css('background','#455a64');
         $(elem).css('border','none');
+        console.log(i);
       });
 
       $(event.target).css('background','#3b4c54');
@@ -18,6 +19,7 @@ var clickli = (function () {
      
   
       panels.on('click', function () {
+        console.log(event);
         setPercents(event);
       });
     }
@@ -29,7 +31,9 @@ var clickli = (function () {
         loadImages(panel);
       }
     }
-  }());
+}());
+
+
   $(function () {
     clickli.init();
   });
