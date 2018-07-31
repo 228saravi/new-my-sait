@@ -33,6 +33,7 @@ html{
     width: 100%;
 }
 .menu_panel{
+    display: flex;
     cursor: pointer;
     text-decoration: none;
     padding: 10px;
@@ -48,6 +49,9 @@ html{
 .menu__home{
     background: #3b4c54;
     border-left: 3px solid $red;
+   
+}
+.menu__home-icon{
     @include fa-icon;
     @extend .fas;
     &:before{
@@ -56,6 +60,7 @@ html{
         content: fa-content($fa-var-home);
      }
 }
+
 .menu__works{
     @include fa-icon;
     @extend .fas;
@@ -82,9 +87,10 @@ html{
     height: 100vh;
     overflow: scroll;
 }
-.block1{
-    display: block;
+.block{
+    display: none;
 }
-.block2{
+.block-menu__home{
+    
     display: block;
 }

@@ -1,10 +1,9 @@
 var clickli = (function () {
-    var panels = $('.menu_panel');
     var _blocks = $('.block').toArray();
-   
+    var _panels=$('.menu_panel').toArray();
   
     var setPercents = function (event) {
-      var _panels=panels.toArray();
+      
       var blockNumber= _panels.indexOf(event.target);
       _blocks.forEach(function (elem,i) {
       
@@ -18,26 +17,26 @@ var clickli = (function () {
         $(elem).css('border','none');
         
       });
-      console.log();
       $(event.target).css('background','#3b4c54');
       $(event.target).css('border-left','3px solid #ff5252');
     }
   
     var loadImages = function (panels) {
-  
-     
-  
-      panels.on('click', function () {
-        console.log(event);
-        setPercents(event);
+      _panels.forEach(function (elem) {
+        $(elem).on('click', function () {
+          console.log(event);
+          setPercents(event);
+        });
       });
+  
+      
     }
   
     return {
       init: function () {
         
   
-        loadImages(panels);
+        loadImages(_panels);
       }
     }
 }());
