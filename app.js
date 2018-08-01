@@ -17,6 +17,22 @@ const jsonfile = require('jsonfile');
 // проектов
 //const uploadDir = path.join(__dirname, config.upload);
 // view engine setup
+//подключаем модули
+const mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
+//mongoose.connect('mongodb://root:12345@ds137191.mlab.com:37191/testing');
+mongoose
+  .connect(`mongodb://${config.db.host}:${config.db.port}/${config.db.name}`, {
+    user: config.db.user,
+    pass: config.db.password
+  })
+  .catch(e => {
+    console.error(e);
+    throw e;
+  });
+
+require('./models/job');
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 

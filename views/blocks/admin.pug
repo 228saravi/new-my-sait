@@ -14,6 +14,11 @@ block content
         .admin__right-block
             .block.block-menu__home Главная
             .block.block-menu__works Наши работы
-            .block.block-menu__jobs Вакансии
+            .block.block-menu__jobs 
+                form.from_addJob(action="/admin/addJob" method="POST")
+                    input.from_addJob__name(type="text", name="name")
+                    input.from_addJob__conditions(type="text", name="conditions")
+                    input.from_addJob__requirements(type="text", name="requirements")
+                    button(type="submit") Отправить
     script(src="/js/main.js")
     script(src="/js/adminka.js")

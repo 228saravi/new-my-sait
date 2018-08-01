@@ -43,5 +43,6 @@ var clickli = (function () {
 
 
   $(function () {
+    console.log($('.from_addJob'));
     clickli.init();
   });
