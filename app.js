@@ -8,7 +8,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const app = express();
 const server = http.createServer(app);
-
+const config = require('./config');
 const jsonfile = require('jsonfile');
 
 // const fileVersionControl = 'version.json';
@@ -22,10 +22,8 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 //mongoose.connect('mongodb://root:12345@ds137191.mlab.com:37191/testing');
 mongoose
-  .connect(`mongodb://${config.db.host}:${config.db.port}/${config.db.name}`, {
-    user: config.db.user,
-    pass: config.db.password
-  })
+  .connect(`mongodb://${config.db.host}:${config.db.port}/${config.db.name}`, 
+  {useNewUrlParser: true})
   .catch(e => {
     console.error(e);
     throw e;
