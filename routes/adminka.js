@@ -10,7 +10,7 @@ router.get('/', function (req, res) {
   res.render('blocks/admin', obj);
 });
 router.post('/addJob', function (req, res) {
-  console.log('sdsdad');
+  console.log(req.body.head+' ');
   if (!req.body.head || !req.body.condision || !req.body.requir) {
     //если что-либо не указано - сообщаем об этом
     return res.json({status: 'Укажите данные!'});
