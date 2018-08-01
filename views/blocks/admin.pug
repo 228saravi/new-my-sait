@@ -17,8 +17,8 @@ block content
             .block.block-menu__jobs 
                 form.from_addJob(action="/admin/addJob" method="POST")
                     input.from_addJob__name(type="text", name="name")
-                    input.from_addJob__conditions(type="text", name="conditions")
-                    input.from_addJob__requirements(type="text", name="requirements")
+                    textarea.from_addJob__conditions(name="conditions", cols="30", rows="10")
+                    textarea.from_addJob__conditions(name="requirements", cols="30", rows="10")
                     button(type="submit") Отправить
     script(src="/js/main.js")
     script(src="/js/adminka.js")

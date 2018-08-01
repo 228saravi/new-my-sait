@@ -8,10 +8,10 @@ const mongoose = require('mongoose'),
       required: [true, 'Укажите описание картинки']
     },
     conditions: {
-      type: String
+      type: Array
     },
     requirements: {
-      type: String
+      type: Array
     }
   });
 
