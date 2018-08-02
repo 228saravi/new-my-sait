@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require('C:/Users/pomix/AppData/Local/Microsoft/TypeScript/2.9/node_modules/@types/express');
 const router = express.Router();
 const mongoose = require('mongoose');
 
@@ -17,6 +17,15 @@ router.get('/', function (req, res) {
 router.post('/unloadJob', function (req, res) {
   const Model = mongoose.model('job');
   Model.find().then(result=>{
+    console.log(result);
+    return res.json(result);
+  });
+
+});
+
+router.post('/idjobs', function (req, res) {
+  const Model = mongoose.model('job');
+  Model.findById(req.body._id).then(result=>{
     console.log(result);
     return res.json(result);
   });

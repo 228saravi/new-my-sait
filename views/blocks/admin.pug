@@ -32,8 +32,8 @@ block content
                                     each ind in index.requirements                                    
                                         =`${ind}` 
                                         br
-                           
-                form.from_addJob(action="/admin/addJob" method="POST")
+                button.button-addJobs(type="button") +          
+                form.from_addJob(action="" method="POST")
                     input.from_addJob__name(type="text", name="name"  placeholder="Заголовок")
                     textarea.from_addJob__conditions(name="conditions", cols="30", rows="10" placeholder="Условия")
                     textarea.from_addJob__requirements(name="requirements", cols="30", rows="10" placeholder="Требования")
