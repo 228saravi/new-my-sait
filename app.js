@@ -30,6 +30,8 @@ mongoose
   });
 
 require('./models/job');
+require('./models/db-close');
+
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');

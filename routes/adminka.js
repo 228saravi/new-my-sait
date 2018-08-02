@@ -7,22 +7,33 @@ router.get('/', function (req, res) {
     title: 'Админка'
   };
   Object.assign(obj, req.app.locals.settings);
-  res.render('blocks/admin', obj);
+  const Model = mongoose.model('job');
+  Model.find().then(result=>{
+    Object.assign(obj,{items: result} );
+    return res.render('blocks/admin', obj);
+  });
+  
+});
+router.post('/unloadJob', function (req, res) {
+  const Model = mongoose.model('job');
+  Model.find().then(result=>{
+    console.log(result);
+    return res.json(result);
+  });
+
 });
 router.post('/addJob', function (req, res) {
 
-  console.log(req.body['condision[]']);
 
-  console.log(req.body);
   if (!req.body.head || !req.body['condision[]'] || !req.body['requir[]']) {
     //если что-либо не указано - сообщаем об этом
     return res.json({status: 'Укажите данные!'});
   }
-  console.log('sddddddddddd');
   //создаем новую запись блога и передаем в нее поля из формы
   const Model = mongoose.model('job');
   let item = new Model({name: req.body.head, conditions: req.body['condision[]'], requirements: req.body['requir[]']});
-  // let item = new Model({name: 'req.body.head', conditions: 'req.body.condision', requirements: 'req.body.requir'});
+ 
+    //обрабатываем и отправляем ответ в браузер
   item.save().then(
     //обрабатываем и отправляем ответ в браузер
     (i) => {
