@@ -19,6 +19,9 @@ _list.forEach(element => {
     $(element).on('click',function () {
        
         displayBlock(element); 
+        console.log(element.id);
+        //ajaxPostId({id:element.id})
+
     })
     $(element).on('mouseout',function () {
         $(element).css('background', 'none');    
@@ -28,4 +31,12 @@ function displayBlock(element) {
     $(_form).css('display', 'flex');
     $(_ulJobs).css('display', 'none'); 
     console.log( $(element).toArray());
+}
+function ajaxPostId(id, cb){
+    $.ajax({
+        type: 'POST',
+        url: '/admin/idjobs',
+        data: id,
+        success: cb(dataPost)
+    })
 }
