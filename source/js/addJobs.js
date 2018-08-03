@@ -1,18 +1,39 @@
-import  sendAjax  from "./sendAjax";
+import  sendAjax  from './modules/sendAjax.js';
 var addJob=(function () {
     let _list = $('.list').toArray();
     let _form =  document.querySelector('.from_addJob');
     let _ulJobs = $('.list-jobs').toArray();
     var _idUpdate;
-    $('.button-addJobs').on('click',function (params) {
-        
-    })
     let from_jobs = document.querySelector('.from_addJob');
-    $('.button-addJobs').on('click',function () {    
+    
+    $('.button-addJobs').on('click',function (params) {
+       
+        console.log('sssss');
+        displayBlock()
+   
         if (from_jobs) {
-            $(from_jobs).on('submit', prepareSendJobs);
+            $(from_jobs).on('submit', function (event) {
+                event.preventDefault();
+                console.log();
+                let data = {
+                    head: from_jobs.name.value,
+                    condision: from_jobs.conditions.value.split('\n'),
+                    requir: from_jobs.requirements.value.split('\n')
+                };
+                console.log(data);
+                sendAjax('/admin/addJob', data, function(msg){
+                        if (msg.status){
+                            location.reload();
+                        }
+                        else{
+                            alert("Сообшение"+msg.message);
+                        }
+                })
+            });
         }
-    });
+    })
+    
+    
       
 
     ////////////
@@ -22,22 +43,21 @@ var addJob=(function () {
             $(element).css('background', '#bdbdbd');
         });
         $(element).on('click',function () {
-            $(from_jobs).on('submit', prepareSendMail);
+            //$(from_jobs).on('submit', prepareSendJobsUpdate);
             displayBlock(element); 
-            console.log(_form.action);
-            _form.action='/admin/updateJob'
-            console.log(_form.action);
             _idUpdate = element.id;
-            ajaxPostId({_id: element.id})
+           // ajaxPostId({_id: element.id})
 
         })
         $(element).on('mouseout',function () {
             $(element).css('background', 'none');    
         })
     });
-    function displayBlock(element) {
+    function displayBlock() {
         $(_form).css('display', 'flex');
         $(_ulJobs).css('display', 'none'); 
+        $('.button-addJobs').css('display', 'none'); 
+        
     }
     function ajaxPostId(id){
         $.ajax({
@@ -53,8 +73,8 @@ var addJob=(function () {
         })
     }
     ///////
-    function prepareSendJobs(e) {
-        e.preventDefault();
+    function prepareSendJobsUpdate() {
+        event.preventDefault();
         console.log();
         let data = {
             head: from_jobs.name.value,
@@ -66,8 +86,8 @@ var addJob=(function () {
                 alert( "Прибыли данные: " + msg.status );
         })
     }
-    function prepareSendJobs(e) {
-        e.preventDefault();
+    function prepareSendJobsAdd(event) {
+        event.preventDefault();
         console.log();
         let data = {
             head: from_jobs.name.value,
@@ -76,7 +96,15 @@ var addJob=(function () {
         };
         console.log(data);
         sendAjax('/admin/addJob', data, function(msg){
-                alert( "Прибыли данные: " + msg.status );
+                console.log(msg);
+                // if (msg.status){
+                //     location.reload();
+                // }
+                // else{
+                //     alert("Сообшение"+msg.message);
+                // }
         })
     }
+
+
 }());
