@@ -8,5 +8,6 @@ module.exports =[
     './gulp/task/watch.js',
     './gulp/task/img.js',
     './gulp/task/jsBabel.js',
+    './gulp/task/react.js',
     './gulp/task/nodemon.js'
 ]

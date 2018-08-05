@@ -28,7 +28,8 @@ $.gulp.task('default', $.gulp.series(
     $.gulp.parallel(
         'sass',
         'img',
-        'babel'
+         'babel',
+        'buildjsx'
     ),
     $.gulp.parallel(
         'nodemon'

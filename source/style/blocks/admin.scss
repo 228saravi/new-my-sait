@@ -61,7 +61,7 @@ html{
      }
 }
 
-.menu__works{
+.menu__works-icon{
     @include fa-icon;
     @extend .fas;
     &:before{
@@ -71,7 +71,7 @@ html{
      }
 }
 
-.menu__jobs{
+.menu__jobs-icon{
     @include fa-icon;
     @extend .fas;
     &:before{
