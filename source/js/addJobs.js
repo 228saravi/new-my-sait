@@ -5,7 +5,7 @@ var addJob=(function () {
     let _ulJobs = $('.list-jobs').toArray();
     var _idUpdate;
     let from_jobs = document.querySelector('.from_addJob');
-    
+    /////////////////
     $('.button-addJobs').on('click',function (params) {
        
         console.log('sssss');
