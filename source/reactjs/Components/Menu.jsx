@@ -1,15 +1,36 @@
-import React from 'react'
-import MenuList from './MenuList'
-export default function Menu(){
-    const _menuTitle=[{name:'home', key:1},{name:'works', key:2},{name:'jobs', key:3}];
-    return(
-        <div className='admin'>
-            <div className='admin__left-block'>
-                <hr className='admin_line'/>                
-                    <MenuList params={_menuTitle} />
-            </div>
-            <div className='admin__right-block'></div>
-        </div>
-    )
+import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 
+
+export default class Menu extends Component{
+    static propTypes = {
+        menu: PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            name: PropTypes.string.isRequired
+        }).isRequired
+    }
+    render() {
+        const {menu,toggleOpen}=this.props
+        return (
+                <li className={'menu_panel menu__'+menu.name} key={menu.key} onClick={toggleOpen}>
+                    <div className={'menu__'+menu.name+'-icon'}></div>
+                    <div className='text'>{menu.name}</div>
+                </li>
+        );
+    }
 }
+
+
+
+
+// export default function MenuList({params}){
+//     const MenuElements=params.map((element)=> <li className={'menu_panel menu__'+element.name} key={element.key}>
+//                                                 <div className={'menu__'+element.name+'-icon'}></div>
+//                                                 <div className='text'>{element.name}</div>
+//                                             </li>);
+//     return(
+//         <ul className='menu'>
+//             {MenuElements}
+//         </ul>
+//     )
+// }

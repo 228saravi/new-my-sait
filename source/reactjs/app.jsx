@@ -1,8 +1,8 @@
  import React from 'react'
  import {render} from 'react-dom'
- import Menu from "./Components/Menu.jsx";
+ import MenuList from "./Components/MenuList";
 
- render(<Menu/>, document.getElementById('CR'));
+ render(<MenuList/>, document.getElementById('CR'));
 
 
   
